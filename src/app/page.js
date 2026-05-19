@@ -9,6 +9,7 @@ import {
   HiOutlineViewGrid,
   HiOutlineClipboardList,
 } from "react-icons/hi";
+import Image from "next/image";
 
 /* Counter Component */
 const Counter = ({ end, suffix = "" }) => {
@@ -40,8 +41,6 @@ const Counter = ({ end, suffix = "" }) => {
     </span>
   );
 };
-
-
 
 const statsData = [
   {
@@ -100,32 +99,32 @@ const service = [
 
 const services = [
   {
-    icon: "🏠",
+    image: "/Home/homeResidentialConstruction.png",
     title: "Residential Construction",
     desc: "Custom homes built with precision and care, from foundation to finish.",
   },
   {
-    icon: "🏢",
+    image: "/Home/homeCommercialProjects.png",
     title: "Commercial Projects",
     desc: "Office complexes and retail spaces designed for modern business needs.",
   },
   {
-    icon: "🔨",
+    image: "/Home/homeRenovationRemodeling.png",
     title: "Renovation & Remodeling",
     desc: "Transform existing spaces with our expert renovation services.",
   },
   {
-    icon: "🎨",
+    image: "/Home/homeInteriorDesign.png",
     title: "Interior Design",
     desc: "Luxurious interiors that blend aesthetics with functionality.",
   },
   {
-    icon: "📐",
+    image: "/Home/homeArchitecturePlanning.png",
     title: "Architecture & Planning",
     desc: "Innovative designs tailored to your vision and lifestyle.",
   },
   {
-    icon: "🔑",
+    image: "/Home/homeTurnkeySolutions.png",
     title: "Turnkey Solutions",
     desc: "Complete end-to-end property solutions under one roof.",
   },
@@ -182,137 +181,137 @@ export default function HomePage() {
         {/* Background Image */}
         <img
           src="/homehero.png"
-          alt="Elite BuildCare"
+          alt="Elite Construction"
           className="absolute inset-0 w-full h-full object-cover"
         />
+        <div className="grid lg:grid-cols-2 grid-cols-1 w-full items-center justify-center mb-10 md:mb-0 px-2 md:px-0">
+          {/* Content Area */}
+          <div className="z-20 min-h-screen w-full flex items-center justify-center lg:justify-start py-2 md:py-16 mb-2 md:mb-0">
+            {/* White Box */}
+            <div className="bg-white/95 backdrop-blur-sm w-full md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl shadow-2xl ">
+              {/* Logo Center */}
+              <div className="flex justify-center mb-6 h-20">
+                <img
+                  src="/favicon.png"
+                  alt="Elite Construction"
+                  className="w-35 h-35 rounded-full absulute top-10 left-1/2  -translate-y-1/2"
+                />
+              </div>
 
-        {/* Content Area */}
-        <div className="z-20 min-h-screen w-full flex items-center justify-center md:justify-start py-10 sm:py-16">
-          {/* White Box */}
-          <div className="bg-white/95 backdrop-blur-sm w-full md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl shadow-2xl ">
-            {/* Logo Center */}
-            <div className="flex justify-center mb-6 h-20">
-              <img
-                src="/favicon.png"
-                alt="Elite BuildCare"
-                className="w-35 h-35 rounded-full absulute top-10 left-1/2  -translate-y-1/2"
-              />
-            </div>
+              {/* Brand Name */}
+              <div className="text-center">
+                <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-[#B8934A] leading-none">
+                  Elite
+                </h1>
 
-            {/* Brand Name */}
-            <div className="text-center">
-              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-[#B8934A] leading-none">
-                Elite
-              </h1>
+                <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold text-black mt-2 leading-none">
+                  Construction
+                </h2>
+              </div>
+              <div className="max-w-md mx-auto text-center my-4 md:my-8">
+                {/* Subtitle */}
+                <p className="mt-2 md:mt-8 text-sm sm:text-base md:text-lg text-gray-600">
+                  Turn-key Construction & Design Solutions
+                </p>
 
-              <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold text-black mt-2 leading-none">
-                BuildCare
-              </h2>
-            </div>
-            <div className="max-w-md mx-auto text-center my-8">
-              {/* Subtitle */}
-              <p className=" mt-8 text-sm sm:text-base md:text-lg text-gray-600">
-                Turn-key Construction & Design Solutions
-              </p>
+                {/* Divider */}
+                <div className="w-24 h-[3px] mx-auto bg-[#B8934A] my-4 my-8"></div>
 
-              {/* Divider */}
-              <div className="w-24 h-[3px] mx-auto bg-[#B8934A] my-8"></div>
+                {/* Tagline */}
+                <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900">
+                  From Land to Legacy
+                </p>
+              </div>
 
-              {/* Tagline */}
-              <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900">
-                From Land to Legacy
-              </p>
-            </div>
-
-            {/* Button */}
-            <div className="flex justify-center mb-10">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/projects"
-                  className="btn-outline text-center w-full sm:w-auto"
-                >
-                  Explore Projects
-                </Link>
-                <Link
-                  href="/contact"
-                  className="btn-primary text-center w-full sm:w-auto"
-                >
-                  Free Consultation →
-                </Link>
+              {/* Button */}
+              <div className="flex justify-center mb-10">
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    href="/projects"
+                    className="btn-outline text-center sm:w-auto"
+                  >
+                    Explore Projects
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="btn-primary text-center w-full sm:w-auto"
+                  >
+                    Free Consultation →
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className=" w-full">
-          <div className="max-w-lg mx-auto lg:ml-auto">
-            <div className="relative bg-[#B8934A] py-2 text-center">
-              <div className="absolute left-0 top-full w-0 h-0 border-t-[16px] border-t-[#8e6f34] border-r-[16px] border-r-transparent rotate-93"></div>
+          <div className=" w-full">
+            <div className="max-w-lg mx-auto lg:ml-auto">
+              <div className="relative bg-[#B8934A] py-2 text-center">
+                <div className="absolute left-0 top-full w-0 h-0 border-t-[16px] border-t-[#8e6f34] border-r-[16px] border-r-transparent rotate-93"></div>
 
-              <div className="absolute right-0 top-full w-0 h-0 border-t-[16px] border-t-[#8e6f34] border-l-[16px] border-l-transparent rotate-270"></div>
+                <div className="absolute right-0 top-full w-0 h-0 border-t-[16px] border-t-[#8e6f34] border-l-[16px] border-l-transparent rotate-270"></div>
 
-              <h2 className="text-white text-xl sm:text-2xl font-bold px-4">
-                Book a Free Consultation
-              </h2>
-            </div>
-            <div className="relative bg-white text-[#B8934A] border border-[#B8934A]/30 shadow-2xl rounded-sm overflow-hidden mx-3">
-              <div className="p-5 space-y-3">
-                <div>
-                  <label className="block text-sm font-semibold mb-1">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Enter your name"
-                    className="w-full h-8 px-4 border border-gray-300 focus:border-[#B8934A] outline-none"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-semibold mb-1">
-                    Mobile
-                  </label>
-                  <input
-                    type="tel"
-                    placeholder="Contact Number"
-                    className="w-full h-8 px-4 border border-gray-300 focus:border-[#B8934A] outline-none"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-semibold mb-1">
-                    Verify Mobile (OTP)
-                  </label>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                    <button className="h-8 bg-[#B8934A] text-white font-semibold hover:bg-[#9c7734] transition">
-                      SEND OTP
-                    </button>
-
+                <h2 className="text-white text-xl sm:text-2xl font-bold px-4">
+                  Book a Free Consultation
+                </h2>
+              </div>
+              <div className="relative bg-white text-[#B8934A] border border-[#B8934A]/30 shadow-2xl rounded-sm overflow-hidden mx-3">
+                <div className="p-5 space-y-3">
+                  <div>
+                    <label className="block text-sm font-semibold mb-1">
+                      Name
+                    </label>
                     <input
                       type="text"
-                      placeholder="Enter OTP"
-                      className="sm:col-span-1 h-8 px-4 border border-gray-300 focus:border-[#B8934A] outline-none"
+                      placeholder="Enter your name"
+                      className="w-full h-8 px-4 border border-gray-300 focus:border-[#B8934A] outline-none"
                     />
-
-                    <button className="h-8 bg-[#B8934A] text-white font-semibold hover:bg-[#9c7734] transition">
-                      VERIFY
-                    </button>
                   </div>
-                </div>
 
-                <div>
-                  <label className="block text-sm font-semibold mb-1">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    className="w-full h-8 px-4 border border-gray-300 focus:border-[#B8934A] outline-none"
-                  />
-                </div>
+                  <div>
+                    <label className="block text-sm font-semibold mb-1">
+                      Mobile
+                    </label>
+                    <input
+                      type="tel"
+                      placeholder="Contact Number"
+                      className="w-full h-8 px-4 border border-gray-300 focus:border-[#B8934A] outline-none"
+                    />
+                  </div>
 
-                <div>
+                  <div>
+                    <label className="block text-sm font-semibold mb-1">
+                      Verify Mobile (OTP)
+                    </label>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                      <button className="h-8 bg-[#B8934A] text-white font-semibold hover:bg-[#9c7734] transition">
+                        SEND OTP
+                      </button>
+
+                      <input
+                        type="text"
+                        placeholder="Enter OTP"
+                        className="sm:col-span-1 h-8 px-4 border border-gray-300 focus:border-[#B8934A] outline-none"
+                      />
+
+                      <button className="h-8 bg-[#B8934A] text-white font-semibold hover:bg-[#9c7734] transition">
+                        VERIFY
+                      </button>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold mb-1">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      placeholder="Email Address"
+                      className="w-full h-8 px-4 border border-gray-300 focus:border-[#B8934A] outline-none"
+                    />
+                  </div>
+
+                  {/* <div>
                   <label className="block text-sm font-semibold mb-1">
                     Current Location
                   </label>
@@ -328,9 +327,9 @@ export default function HomePage() {
                       Outside India
                     </label>
                   </div>
-                </div>
+                </div> */}
 
-                <div>
+                  {/* <div>
                   <label className="block text-sm font-semibold mb-1">
                     Select City
                   </label>
@@ -342,24 +341,25 @@ export default function HomePage() {
                     <option>Mumbai</option>
                     <option>Ahmedabad</option>
                   </select>
-                </div>
+                </div> */}
 
-                <div>
-                  <label className="block text-sm font-semibold mb-1">
-                    Enquiry Message
-                  </label>
+                  <div>
+                    <label className="block text-sm font-semibold mb-1">
+                      Enquiry Message
+                    </label>
 
-                  <textarea
-                    rows="3"
-                    placeholder="Write your message..."
-                    className="w-full px-4 py-1 border border-gray-300 focus:border-[#B8934A] outline-none resize-none"
-                  ></textarea>
-                </div>
+                    <textarea
+                      rows="3"
+                      placeholder="Write your message..."
+                      className="w-full px-4 py-1 border border-gray-300 focus:border-[#B8934A] outline-none resize-none"
+                    ></textarea>
+                  </div>
 
-                <div className="pt-2">
-                  <button className="w-full sm:w-auto px-10 h-10 bg-[#B8934A] text-white font-semibold hover:bg-[#9c7734] transition">
-                    SUBMIT
-                  </button>
+                  <div className="pt-2">
+                    <button className="w-full sm:w-auto px-10 h-10 bg-[#B8934A] text-white font-semibold hover:bg-[#9c7734] transition">
+                      SUBMIT
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -380,7 +380,7 @@ export default function HomePage() {
             </h1>
 
             <p className="text-sm sm:text-base max-w-[560px] leading-7 sm:leading-8 mb-8 text-gray-600">
-              Elite BuildCare is an expert turn-key construction & design
+              Elite Construction is an expert turn-key construction & design
               company based in Jaipur. Committed to delivering sustainable
               solutions, our service focuses on quality, excellence & assurance.
               Our 20 years of experience allow us to deliver high-quality
@@ -398,7 +398,7 @@ export default function HomePage() {
 
               <Link
                 href="/contact"
-                className="btn-outline text-center w-full sm:w-auto"
+                className="btn-outline text-center sm:w-auto"
               >
                 Free Consultation →
               </Link>
@@ -546,13 +546,13 @@ export default function HomePage() {
         </div>
       </section> */}
 
-      <section className="relative w-full bg-gradient-to-b from-[#fafafa] via-white to-[#f8f8f8] py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative w-full bg-gradient-to-b from-[#fafafa] via-white to-[#f8f8f8] py-10 md:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#B8934A]/5 blur-3xl rounded-full"></div>
 
         <div className="relative max-w-7xl mx-auto">
           {/* Heading */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-8 md:mb-16">
             <p className="text-[#B8934A] uppercase tracking-[5px] text-sm font-semibold mb-3">
               Our Achievements
             </p>
@@ -597,7 +597,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="w-full bg-[#f5f5f5] py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="w-full bg-[#f5f5f5] py-5 md:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
           {/* Left Content */}
           <div className="relative">
@@ -606,13 +606,13 @@ export default function HomePage() {
               About Us
             </div>
             {/* Sub Heading */}
-            <h2 className="text-5xl font-bold text-gray-900 mb-6 relative z-10">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 relative z-10">
               Dreams Into Reality
             </h2>
 
             {/* Paragraph */}
             <p className="text-gray-600 text-base sm:text-lg leading-8 max-w-2xl relative text-justify z-10">
-              Elite Buildcare is Jaipur’s premium turnkey construction and
+              Elite Construction is Jaipur’s premium turnkey construction and
               design company delivering dream homes, commercial spaces,
               interiors, and renovations with unmatched quality, expert
               planning, and on-time execution. From concept to handover, we
@@ -621,10 +621,10 @@ export default function HomePage() {
             </p>
 
             {/* Button */}
-            <div className="mt-10 relative z-10">
+            <div className="mt-5 md:mt-10 relative z-10">
               <Link
                 href="/projects"
-                className="btn-outline text-center w-full sm:w-auto"
+                className="btn-outline text-center sm:w-auto"
               >
                 Learn More →
               </Link>
@@ -640,7 +640,7 @@ export default function HomePage() {
             <div className="relative bg-white p-4 shadow-xl">
               <img
                 src="/homeabout.png"
-                alt="Elite BuildCare Building"
+                alt="Elite Construction Building"
                 className="w-full h-[450px]  object-cover"
               />
             </div>
@@ -649,10 +649,10 @@ export default function HomePage() {
       </section>
 
       {/* ── FEATURED PROJECTS ── */}
-      <section className="py-16 sm:py-20 lg:py-28 bg-white">
+      <section className="py-10 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
           {/* Heading */}
-          <div className="text-center mb-12 sm:mb-14 lg:mb-16">
+          <div className="text-center mb-6 lg:mb-16">
             <div className="section-tag justify-center text-xs sm:text-sm">
               Our Portfolio
             </div>
@@ -708,7 +708,7 @@ export default function HomePage() {
           <div className="text-center mt-10 sm:mt-12 lg:mt-14">
             <Link
               href="/projects"
-              className="btn-primary w-full sm:w-auto inline-block text-center"
+              className="btn-primary sm:w-auto inline-block text-center"
             >
               View All Projects
             </Link>
@@ -716,18 +716,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="w-full bg-[#f7f7f7] py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="w-full bg-[#f7f7f7] py-10 md:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-5 md:mb-10">
             <div className="section-tag justify-center text-xs sm:text-sm">
               Our Expertise
             </div>
-            <h2 className="text-5xl font-bold text-gray-900 leading-tight mb-6 relative z-10">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight mb-2 relative z-10">
               Expertise In Our Service
             </h2>
 
-            <p className="mt-6 text-lg sm:text-xl text-gray-800 max-w-5xl mx-auto leading-relaxed">
+            <p className=" text-lg sm:text-xl text-gray-800 max-w-5xl mx-auto leading-relaxed">
               We ensure an outstanding experience with comprehensive services
               that go Above & Beyond. Our methods have evolved with the times
               through our professional journey.
@@ -769,25 +769,23 @@ export default function HomePage() {
       </section>
 
       {/* ── SERVICES ── */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white text-gray-900 relative overflow-hidden">
-        {/* Decorative Glow */}
-        <div className="absolute top-0 right-0 w-72 h-72 bg-[#B8934A]/10 blur-3xl rounded-full" />
+      <section className="py-10 md:py-20 bg-white text-gray-900 relative overflow-hidden">
         <div className="absolute bottom-0 left-0 w-72 h-72 bg-black/5 blur-3xl rounded-full" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
           {/* Heading */}
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
+          <div className="flex flex-col lg:flex-row items-center lg:items-end justify-center lg:justify-between gap-6 mb-5 md:mb-14">
             <div>
               <div className="section-tag text-xs sm:text-sm">What We Do</div>
 
-              <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold text-gray-900 leading-tight">
+              <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
                 Our Services
               </h2>
             </div>
 
             <Link
               href="/service"
-              className="btn-outline w-full sm:w-fit text-center"
+              className="btn-outline w-56 md:w-auto text-center"
             >
               View All Services
             </Link>
@@ -808,10 +806,12 @@ export default function HomePage() {
 
                 {/* Icon */}
                 <div className="w-18 h-18 rounded-2xl bg-gradient-to-br from-[#B8934A]/15 to-[#B8934A]/5 border border-[#B8934A]/20 flex items-center justify-center mb-6 group-hover:rotate-6 group-hover:scale-110 transition-all duration-500">
-                  <img
+                  <Image
                     src={s.image}
                     alt={s.title}
-                    className="w-10 h-10 object-contain"
+                    width={40}
+                    height={40}
+                    className="object-contain"
                   />
                 </div>
 
@@ -831,7 +831,7 @@ export default function HomePage() {
                 </p>
 
                 {/* Bottom Arrow */}
-                <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-[#B8934A] opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-[#B8934A] opacity-100 lg:opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
                   Learn More →
                 </div>
               </div>
@@ -841,25 +841,25 @@ export default function HomePage() {
       </section>
 
       {/* ── WHY US ── */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
+      <section className="pb-10 lg:pb-20 bg-white relative overflow-hidden">
         {/* Background Glow */}
         <div className="absolute top-0 right-0 w-56 sm:w-72 lg:w-96 h-56 sm:h-72 lg:h-96 rounded-full bg-[radial-gradient(circle,rgba(184,147,74,0.08)_0%,transparent_70%)]" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-20 items-center">
             {/* Left Content */}
             <div>
               <div className="section-tag text-xs sm:text-sm">
                 Why Choose Us
               </div>
 
-              <h2 className="font-display text-[clamp(2rem,5vw,3.2rem)] font-bold text-gray-900 mb-5 sm:mb-6 leading-tight">
+              <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-2 md::mb-6 leading-tight">
                 Excellence Is Our
                 <br />
                 <span className="text-[#B8934A]">Foundation</span>
               </h2>
 
-              <p className="text-sm sm:text-[0.95rem] text-gray-600 leading-7 sm:leading-8 mb-8 sm:mb-10 max-w-xl">
+              <p className="text-sm sm:text-[0.95rem] text-gray-600 leading-7 sm:leading-8 mb-4 md:mb-8 sm:mb-10 max-w-xl">
                 We offer over 20 years of expertise in planning & design. More
                 than builders—we’re your long-term partners, committed to your
                 vision.
@@ -914,7 +914,7 @@ export default function HomePage() {
       </section>
 
       {/* ── CTA BANNER ── */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-[#B8934A]/5 border-y border-[#B8934A]/15 relative overflow-hidden">
+      <section className="py-10 md:py-20 bg-[#B8934A]/5 border-y border-[#B8934A]/15 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 grid-bg-dense opacity-60" />
 
@@ -929,8 +929,7 @@ export default function HomePage() {
 
           {/* Heading */}
           <h2 className="font-display text-[clamp(2rem,6vw,4rem)] mb-4 sm:mb-5 font-bold text-gray-900 leading-tight">
-            Ready to Build Your{" "}
-            <span className="text-[#B8934A] italic">Dream?</span>
+            Ready to Build Your <span className="text-[#B8934A]">Dream?</span>
           </h2>
 
           {/* Description */}
@@ -943,14 +942,14 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               href="/contact"
-              className="btn-primary w-full sm:w-auto text-center text-sm px-8 sm:px-11 py-4 sm:py-[18px]"
+              className="btn-primary sm:w-auto text-center text-sm px-8 sm:px-11 py-4 sm:py-[18px]"
             >
               Book Free Consultation
             </Link>
 
             <a
               href="tel:+919876543210"
-              className="btn-outline w-full sm:w-auto text-center text-sm px-8 sm:px-11 py-4"
+              className="btn-outline  sm:w-auto text-center text-sm px-8 sm:px-11 py-4"
             >
               Call: +91 98765 43210
             </a>

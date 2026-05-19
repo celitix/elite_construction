@@ -120,7 +120,7 @@ export default function ProjectsPage() {
     <>
 
       {/* HERO */}
-      <section className="min-h-[45vh] sm:min-h-[50vh] lg:min-h-[55vh] flex items-end relative overflow-hidden pb-12 sm:pb-16 lg:pb-20 bg-white">
+      <section className="min-h-[20vh] flex items-end relative overflow-hidden pb-12 lg:pb-20">
         {/* Background */}
         <div className="absolute inset-0 bg-white" />
         <div className="absolute inset-0 grid-bg opacity-60" />
@@ -134,8 +134,8 @@ export default function ProjectsPage() {
         <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-10 relative z-10 pt-24 sm:pt-28">
           <div className="section-tag text-xs sm:text-sm">Our Portfolio</div>
 
-          <h1 className="font-display text-[clamp(2.3rem,7vw,5.5rem)] font-semibold text-gray-900 leading-tight">
-            Our <span className="text-[#B8934A] italic">Projects</span>
+          <h1 className="font-display text-[clamp(2.2rem,7vw,5.5rem)] font-semibold text-gray-900 leading-tight max-w-4xl">
+            Our <span className="text-[#B8934A] ">Projects</span>
           </h1>
 
           <p className="text-sm sm:text-base text-gray-600 mt-4 max-w-[500px] leading-7">

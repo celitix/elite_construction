@@ -60,20 +60,24 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <div className="section-tag mb-5">Services</div>
+  <div className="section-tag mb-5">Services</div>
 
-            {[
-              "Residential",
-              "Commercial",
-              "Renovation",
-              "Interior Design",
-              "Consultation",
-            ].map((s) => (
-              <div key={s} className="text-sm text-white/90 mb-3">
-                {s}
-              </div>
-            ))}
-          </div>
+  {[
+    ["Residential", "/residential"],
+    ["Commercial", "/commercial"],
+    ["Renovation", "/renovation"],
+    ["Interior Design", "/interior-design"],
+    ["Consultation", "/consultation"],
+  ].map(([label, href]) => (
+    <Link
+      key={href}
+      href={href}
+      className="block text-sm text-white/90 hover:text-[#B8934A] mb-3 transition duration-300"
+    >
+      {label}
+    </Link>
+  ))}
+</div>
 
           {/* Contact */}
           <div>
@@ -97,7 +101,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-3 py-6">
           <p className="text-xs sm:text-sm text-white/90">
-            © 2026 Elite Buildcare. All rights reserved.
+            © 2026 Elite Construction. All rights reserved.
           </p>
         </div>
       </div>

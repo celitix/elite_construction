@@ -68,7 +68,7 @@ export default function ContactPage() {
   return (
     <>
       {/* HERO */}
-      <section className="min-h-[45vh] sm:min-h-[50vh] lg:min-h-[55vh] flex items-end relative overflow-hidden pb-12 sm:pb-16 lg:pb-20 bg-white">
+      <section className="min-h-[20vh] flex items-end relative overflow-hidden pb-12 lg:pb-20">
         {/* Background */}
         <div className="absolute inset-0 bg-white" />
         <div className="absolute inset-0 grid-bg opacity-60" />

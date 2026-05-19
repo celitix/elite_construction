@@ -69,11 +69,33 @@ const values = [
   },
 ];
 
+
+const projects = [
+  {
+    name: "Skyline Residences",
+    type: "Luxury Apartments",
+    loc: "Vaishali Nagar, Jaipur",
+    img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80",
+  },
+  {
+    name: "The Heritage Villas",
+    type: "Premium Villas",
+    loc: "Jagatpura, Jaipur",
+    img: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600&q=80",
+  },
+  {
+    name: "Axis Business Park",
+    type: "Commercial Complex",
+    loc: "Sitapura, Jaipur",
+    img: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
+  },
+];
+
 export default function AboutPage() {
   return (
     <>
       {/* HERO */}
-      <section className="min-h-[45vh] lg:min-h-[50vh] flex items-end relative overflow-hidden pb-12 sm:pb-16 lg:pb-20">
+      <section className="min-h-[20vh] flex items-end relative overflow-hidden pb-12 lg:pb-20">
         {/* Background */}
         <div className="absolute inset-0 bg-white text-gray-900" />
         <div className="absolute inset-0 grid-bg opacity-60" />
@@ -88,13 +110,13 @@ export default function AboutPage() {
           <div className="section-tag text-xs sm:text-sm">Our Story</div>
 
           <h1 className="font-display text-[clamp(2.2rem,7vw,5.5rem)] font-semibold text-gray-900 leading-tight max-w-4xl">
-            Elite Buildcare
+            Elite Construction
           </h1>
         </div>
       </section>
 
       {/* MISSION */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white text-gray-900">
+      <section className="py-10 lg:py-16 bg-white text-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-14 lg:gap-20 items-center">
             <div className="relative order-1">
@@ -119,7 +141,7 @@ export default function AboutPage() {
               </h2>
 
               <p className="text-sm sm:text-[0.95rem] text-gray-600 text-justify leading-6">
-                Elite BuildCare is an expert turn-key construction & design
+                Elite Construction is an expert turn-key construction & design
                 company based in Jaipur. Committed to delivering sustainable
                 solutions, our service focuses on quality, excellence &
                 assurance.
@@ -175,7 +197,7 @@ export default function AboutPage() {
       <section className="w-full bg-gradient-to-b from-[#fafafa] via-white to-[#f8f8f8] py-16 px-6 md:px-16 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
-          <div className="text-center mb-20">
+          <div className="text-center mb-10 md:mb-20">
             <p className="text-[#B8934A] uppercase tracking-[5px] font-semibold mb-3 text-sm">
               What We Believe
             </p>
@@ -234,7 +256,7 @@ export default function AboutPage() {
       </section>
 
       {/* VALUES */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
+      <section className="py-10 lg:py-20 bg-white relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute top-0 left-0 w-72 h-72 bg-[#B8934A]/10 blur-3xl rounded-full" />
         <div className="absolute bottom-0 right-0 w-72 h-72 bg-black/5 blur-3xl rounded-full" />
@@ -344,7 +366,7 @@ export default function AboutPage() {
       </section>
 
       {/* TIMELINE */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white text-gray-900 relative overflow-hidden">
+      <section className="py-10 lg:py-20 bg-white text-gray-900 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 sm:w-80 h-64 sm:h-80 rounded-full bg-[radial-gradient(circle,rgba(184,147,74,0.08)_0%,transparent_70%)]" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
@@ -389,6 +411,74 @@ export default function AboutPage() {
                 <div className="hidden md:block flex-1" />
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FEATURED PROJECTS ── */}
+      <section className="py-10 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+          {/* Heading */}
+          <div className="text-center mb-12 sm:mb-14 lg:mb-16">
+            <div className="section-tag justify-center text-xs sm:text-sm">
+              Our Portfolio
+            </div>
+
+            <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold text-gray-900 leading-tight">
+              Featured Projects
+            </h2>
+          </div>
+
+          {/* Projects Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-6 lg:gap-7">
+            {projects.map((p, i) => (
+              <div
+                key={i}
+                className="relative overflow-hidden rounded-2xl cursor-pointer group shadow-md hover:shadow-2xl transition-all duration-500"
+              >
+                {/* Image */}
+                <img
+                  src={p.img}
+                  alt={p.name}
+                  className="w-full h-72 sm:h-80 lg:h-[340px] object-cover transition-transform duration-700 brightness-75 group-hover:scale-110"
+                />
+
+                {/* Content */}
+                <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+                  <div className="text-[10px] sm:text-[0.62rem] font-bold tracking-[0.2em] uppercase text-[#B8934A] mb-1.5">
+                    {p.type}
+                  </div>
+
+                  <h3 className="font-display text-xl sm:text-2xl text-white leading-tight">
+                    {p.name}
+                  </h3>
+
+                  <div className="text-xs sm:text-sm text-white/70 mt-1">
+                    📍 {p.loc}
+                  </div>
+                </div>
+
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-[#B8934A]/15 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
+                  <Link
+                    href="/projects"
+                    className="text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase text-white border border-white px-5 sm:px-7 py-3 hover:bg-white hover:text-black transition"
+                  >
+                    View Details
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Button */}
+          <div className="text-center mt-10 sm:mt-12 lg:mt-14">
+            <Link
+              href="/projects"
+              className="btn-primary w-full sm:w-auto inline-block text-center"
+            >
+              View All Projects
+            </Link>
           </div>
         </div>
       </section>
