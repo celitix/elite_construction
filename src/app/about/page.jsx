@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Testimonials from "../components/Testimonials";
 
 export const metadata = { title: "About Us | Elite Infra" };
@@ -10,12 +11,12 @@ const value = [
     desc: "in Service",
   },
   {
-    image: "Precision.png",
+    image: "/Precision.png",
     title: "Precision",
     desc: "An Engineer’s Approach",
   },
   {
-    image: "Punctuality.png",
+    image: "/Punctuality.png",
     title: "Punctuality",
     desc: "On-Time, Start to Finish",
   },
@@ -53,22 +54,22 @@ const milestones = [
 
 const values = [
   {
-    icon: "🏆",
+    image: "/About/QualityFirst.svg",
     title: "Quality First",
     desc: "We use only premium materials and follow international construction standards on every project.",
   },
   {
-    icon: "🤝",
+    image: "/About/ClientTrust.svg",
     title: "Client Trust",
     desc: "Transparent communication and honest pricing have earned us 2000+ satisfied clients.",
   },
   {
-    icon: "⚡",
+    image: "/About/TimelyDelivery.svg",
     title: "Timely Delivery",
     desc: "Our project management ensures on-time delivery with zero compromise on quality.",
   },
   {
-    icon: "🌱",
+    image: "/About/Sustainability.svg",
     title: "Sustainability",
     desc: "Eco-friendly construction practices that protect the environment for future generations.",
   },
@@ -279,8 +280,15 @@ export default function AboutPage() {
             {values.map((v, i) => (
               <div key={i} className="group text-center relative">
                 {/* Icon Circle */}
-                <div className="relative mx-auto w-20 h-20 rounded-full bg-[#B8934A]/10 border border-[#B8934A]/20 flex items-center justify-center text-4xl text-[#B8934A] group-hover:scale-110 group-hover:bg-[#B8934A] group-hover:text-white transition-all duration-500 shadow-lg">
-                  {v.icon}
+                <div className="relative mx-auto w-20 h-20 rounded-full bg-[#B8934A]/10 border border-[#B8934A]/20 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#B8934A] transition-all duration-500 shadow-lg">
+                  <Image
+                    src={v.image}
+                    alt={v.title}
+                    width={36}
+                    height={36}
+                    unoptimized
+                    className="w-9 h-9 object-contain transition-all duration-500 group-hover:brightness-0 group-hover:invert"
+                  />
                 </div>
 
                 {/* Connector Line */}
