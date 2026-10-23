@@ -20,8 +20,8 @@ const services = [
 ];
 
 const contactItems = [
-  { icon: MapPin, text: "Jaipur, Rajasthan, India" },
-  { icon: Phone, text: "+91 98765 43210" },
+  { icon: MapPin, text: "Shop No. 64 To 67 Second Floor, Vishwa Nagar, New Sanganer Road, Jaipur, Rajasthan - 302019" },
+  { icon: Phone, text: "+91 96100 08866" },
   { icon: Mail, text: "info@eliteinfra.in" },
   { icon: Clock, text: "Mon-Sat: 9AM - 7PM" },
 ];

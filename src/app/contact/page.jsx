@@ -11,12 +11,12 @@ const contactItems = [
   {
     icon: <HiOutlineLocationMarker className="text-[#B8934A] text-3xl" />,
     title: "Office Address",
-    val: "12-B, Malviya Nagar Jaipur, Rajasthan 302017",
+    val: "Shop No. 64 To 67 Second Floor, Vishwa Nagar, New Sanganer Road, Jaipur, Rajasthan - 302019",
   },
   {
     icon: <HiOutlinePhone className="text-[#B8934A] text-3xl" />,
     title: "Phone Number",
-    val: "+91 98765 43210, +91 98765 09990",
+    val: "+91 96100 08866",
   },
   {
     icon: <HiOutlineMail className="text-[#B8934A] text-3xl" />,
@@ -40,9 +40,9 @@ const services = [
   "Other",
 ];
 
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919876543210";
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919610008866";
 const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-  "12-B, Malviya Nagar, Jaipur, Rajasthan 302017"
+  "Vinayak Distributors 22 Vishwa Nagar, New Sanganer Road, Jaipur, Rajasthan - 302019"
 )}`;
 
 export default function ContactPage() {
@@ -329,7 +329,7 @@ export default function ContactPage() {
 
           {/* Address */}
           <p className="text-sm sm:text-base  mt-1 leading-7">
-            12-B, Malviya Nagar, Jaipur, Rajasthan
+            Shop No. 64 To 67 Second Floor, Vishwa Nagar, New Sanganer Road, Jaipur, Rajasthan - 302019
           </p>
 
           {/* Button */}

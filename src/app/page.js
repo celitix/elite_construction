@@ -979,10 +979,10 @@ export default function HomePage() {
             </Link>
 
             <a
-              href="tel:+919876543210"
+              href="tel:+919610008866"
               className="btn-outline  sm:w-auto text-center text-sm px-8 sm:px-11 py-4"
             >
-              Call: +91 98765 43210
+              Call: +91 96100 08866
             </a>
           </div>
         </div>

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919876543210";
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919610008866";
 
 export default function ConsultationPopup({ isOpen, onClose }) {
   const [form, setForm] = useState({ name: "", phone: "", email: "", message: "" });
