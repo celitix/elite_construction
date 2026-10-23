@@ -77,8 +77,8 @@ const stats = [
 const service = [
   {
     image: "/imageCCTV.png",
-    title: "AI-BASED CCTV SURVEILLANCE",
-    desc: "Personally oversee your project in real-time with 24/7 live CCTV on-site monitoring, ensuring security and adherence.",
+    title: "PROVEN TRACK RECORD",
+    desc: "Delivering quality construction projects with excellence, reliability, and on-time execution.",
   },
   {
     image: "/imageLongTerm.png",
@@ -102,31 +102,37 @@ const services = [
     image: "/Home/homeResidentialConstruction.png",
     title: "Residential Construction",
     desc: "Custom homes built with precision and care, from foundation to finish.",
+    href: "/residential",
   },
   {
     image: "/Home/homeCommercialProjects.png",
     title: "Commercial Projects",
     desc: "Office complexes and retail spaces designed for modern business needs.",
+    href: "/commercial",
   },
   {
     image: "/Home/homeRenovationRemodeling.png",
     title: "Renovation & Remodeling",
     desc: "Transform existing spaces with our expert renovation services.",
+    href: "/renovation",
   },
   {
     image: "/Home/homeInteriorDesign.png",
     title: "Interior Design",
     desc: "Luxurious interiors that blend aesthetics with functionality.",
+    href: "/interior-design",
   },
   {
     image: "/Home/homeArchitecturePlanning.png",
     title: "Architecture & Planning",
     desc: "Innovative designs tailored to your vision and lifestyle.",
+    href: "/interior-design",
   },
   {
     image: "/Home/homeTurnkeySolutions.png",
     title: "Turnkey Solutions",
     desc: "Complete end-to-end property solutions under one roof.",
+    href: "/residential",
   },
 ];
 
@@ -177,19 +183,61 @@ export default function HomePage() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="relative w-full flex items-center justify-start min-h-screen overflow-hidden bg-[#f8f8f8]">
-        {/* Background Image */}
+      <section
+        className="
+    relative w-full min-h-svh bg-cover bg-center overflow-hidden flex
+    bg-[url('/Home/herohomePhone.jpg')]
+    md:bg-[url('/Home/herohome.jpg')]
+  "
+      >
+        <div className="relative z-10 w-full max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-20 pt-10 lg:pt-40">
+          <div className="max-w-x">
+            <h3 className="text-sm md:text-base lg:text-2xl font-semibold text-black uppercase tracking-widest">
+              We Create Your
+            </h3>
+
+            <h1 className="mt-1 text-4xl md:text-5xl lg:text-6xl font-black text-[#b8984a] leading-tight">
+              &ldquo;Perfect Home&rdquo;
+            </h1>
+
+            <p className="mt-2 text-base md:text-lg text-black">
+              Turn-key Construction & Design Solutions
+            </p>
+
+            <div className="mt-5 flex flex-wrap items-center gap-3">
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/projects"
+                  className="btn-primary text-center w-full sm:w-auto"
+                >
+                  Explore Projects
+                </Link>
+
+                <Link
+                  href="/contact"
+                  className="btn-outline text-center sm:w-auto"
+                >
+                  Free Consultation →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <section className="relative w-full flex items-center justify-start min-h-screen overflow-hidden bg-[#f8f8f8]">
+   
         <img
           src="/homehero.png"
           alt="Elite Construction"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="grid lg:grid-cols-2 grid-cols-1 w-full items-center justify-center mb-10 md:mb-0 px-2 md:px-0">
-          {/* Content Area */}
+    
           <div className="z-20 min-h-screen w-full flex items-center justify-center lg:justify-start py-2 md:py-16 mb-2 md:mb-0">
-            {/* White Box */}
+    
             <div className="bg-white/95 backdrop-blur-sm w-full md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl shadow-2xl ">
-              {/* Logo Center */}
+        
               <div className="flex justify-center mb-6 h-20">
                 <img
                   src="/favicon.png"
@@ -198,7 +246,7 @@ export default function HomePage() {
                 />
               </div>
 
-              {/* Brand Name */}
+           
               <div className="text-center">
                 <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-[#B8934A] leading-none">
                   Elite
@@ -209,21 +257,21 @@ export default function HomePage() {
                 </h2>
               </div>
               <div className="max-w-md mx-auto text-center my-4 md:my-8">
-                {/* Subtitle */}
+ 
                 <p className="mt-2 md:mt-8 text-sm sm:text-base md:text-lg text-gray-600">
                   Turn-key Construction & Design Solutions
                 </p>
 
-                {/* Divider */}
+        
                 <div className="w-24 h-[3px] mx-auto bg-[#B8934A] my-4 my-8"></div>
 
-                {/* Tagline */}
+      
                 <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900">
                   From Land to Legacy
                 </p>
               </div>
 
-              {/* Button */}
+      
               <div className="flex justify-center mb-10">
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
@@ -244,7 +292,7 @@ export default function HomePage() {
           </div>
 
           <div className=" w-full">
-            <div className="max-w-lg mx-auto lg:ml-auto">
+            <div className="max-w-sm mx-auto lg:ml-auto">
               <div className="relative bg-[#B8934A] py-2 text-center">
                 <div className="absolute left-0 top-full w-0 h-0 border-t-[16px] border-t-[#8e6f34] border-r-[16px] border-r-transparent rotate-93"></div>
 
@@ -278,15 +326,15 @@ export default function HomePage() {
                     />
                   </div>
 
+                      <button className="h-8 bg-[#B8934A] text-white font-semibold hover:bg-[#9c7734] transition">
+                        SEND OTP
+                      </button>
                   <div>
                     <label className="block text-sm font-semibold mb-1">
                       Verify Mobile (OTP)
                     </label>
 
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                      <button className="h-8 bg-[#B8934A] text-white font-semibold hover:bg-[#9c7734] transition">
-                        SEND OTP
-                      </button>
 
                       <input
                         type="text"
@@ -311,7 +359,7 @@ export default function HomePage() {
                     />
                   </div>
 
-                  {/* <div>
+                  <div>
                   <label className="block text-sm font-semibold mb-1">
                     Current Location
                   </label>
@@ -327,9 +375,9 @@ export default function HomePage() {
                       Outside India
                     </label>
                   </div>
-                </div> */}
+                </div>
 
-                  {/* <div>
+                  <div>
                   <label className="block text-sm font-semibold mb-1">
                     Select City
                   </label>
@@ -341,7 +389,7 @@ export default function HomePage() {
                     <option>Mumbai</option>
                     <option>Ahmedabad</option>
                   </select>
-                </div> */}
+                </div>
 
                   <div>
                     <label className="block text-sm font-semibold mb-1">
@@ -365,7 +413,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* <section className="relative overflow-hidden bg-white text-gray-900 px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div className=" pt-2 lg:pt-10">
@@ -545,6 +593,81 @@ export default function HomePage() {
           </div>
         </div>
       </section> */}
+
+      {/* ── SERVICES ── */}
+      <section className="py-10 md:py-20 bg-white text-gray-900 relative overflow-hidden">
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-black/5 blur-3xl rounded-full" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
+          {/* Heading */}
+          <div className="flex flex-col lg:flex-row items-center lg:items-end justify-center lg:justify-between gap-6 mb-5 md:mb-14">
+            <div>
+              <div className="section-tag text-xs sm:text-sm">What We Do</div>
+
+              <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+                Our Services
+              </h2>
+            </div>
+
+            <Link
+              href="/service"
+              className="btn-outline w-56 md:w-auto text-center"
+            >
+              View All Services
+            </Link>
+          </div>
+
+          {/* Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+            {services.map((s, i) => (
+              <div
+                key={i}
+                className="group relative bg-white border border-gray-200 rounded-3xl p-7 sm:p-8 overflow-hidden hover:-translate-y-3 hover:shadow-2xl hover:border-[#B8934A]/40 transition-all duration-500"
+              >
+                {/* Corner Glow */}
+                <div className="absolute -top-10 -right-10 w-28 h-28 bg-[#B8934A]/10 rounded-full blur-2xl group-hover:scale-125 transition duration-700" />
+
+                {/* Top Line */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#B8934A] via-[#d2b06b] to-transparent scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
+
+                {/* Icon */}
+                <div className="w-18 h-18 rounded-2xl bg-gradient-to-br from-[#B8934A]/15 to-[#B8934A]/5 border border-[#B8934A]/20 flex items-center justify-center mb-6 group-hover:rotate-6 group-hover:scale-110 transition-all duration-500">
+                  <Image
+                    src={s.image}
+                    alt={s.title}
+                    width={50}
+                    height={50}
+                    className="object-contain"
+                  />
+                </div>
+
+                {/* Number */}
+                <div className="absolute top-6 right-6 text-5xl font-bold text-gray-100 group-hover:text-[#B8934A]/10 transition duration-500">
+                  0{i + 1}
+                </div>
+
+                {/* Title */}
+                <h3 className="font-display text-2xl mb-4 relative z-10 group-hover:text-[#B8934A] transition-colors duration-300">
+                  {s.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-sm sm:text-[15px] text-gray-500 leading-7 relative z-10">
+                  {s.desc}
+                </p>
+
+                {/* Bottom Arrow */}
+                <Link
+                  href={s.href}
+                  className="mt-6 flex items-center gap-2 text-sm font-semibold text-[#B8934A] opacity-100 lg:opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
+                >
+                  Learn More →
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="relative w-full bg-gradient-to-b from-[#fafafa] via-white to-[#f8f8f8] py-10 md:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Glow */}
@@ -768,80 +891,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── SERVICES ── */}
-      <section className="py-10 md:py-20 bg-white text-gray-900 relative overflow-hidden">
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-black/5 blur-3xl rounded-full" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
-          {/* Heading */}
-          <div className="flex flex-col lg:flex-row items-center lg:items-end justify-center lg:justify-between gap-6 mb-5 md:mb-14">
-            <div>
-              <div className="section-tag text-xs sm:text-sm">What We Do</div>
-
-              <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
-                Our Services
-              </h2>
-            </div>
-
-            <Link
-              href="/service"
-              className="btn-outline w-56 md:w-auto text-center"
-            >
-              View All Services
-            </Link>
-          </div>
-
-          {/* Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-            {services.map((s, i) => (
-              <div
-                key={i}
-                className="group relative bg-white border border-gray-200 rounded-3xl p-7 sm:p-8 overflow-hidden hover:-translate-y-3 hover:shadow-2xl hover:border-[#B8934A]/40 transition-all duration-500"
-              >
-                {/* Corner Glow */}
-                <div className="absolute -top-10 -right-10 w-28 h-28 bg-[#B8934A]/10 rounded-full blur-2xl group-hover:scale-125 transition duration-700" />
-
-                {/* Top Line */}
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#B8934A] via-[#d2b06b] to-transparent scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
-
-                {/* Icon */}
-                <div className="w-18 h-18 rounded-2xl bg-gradient-to-br from-[#B8934A]/15 to-[#B8934A]/5 border border-[#B8934A]/20 flex items-center justify-center mb-6 group-hover:rotate-6 group-hover:scale-110 transition-all duration-500">
-                  <Image
-                    src={s.image}
-                    alt={s.title}
-                    width={40}
-                    height={40}
-                    className="object-contain"
-                  />
-                </div>
-
-                {/* Number */}
-                <div className="absolute top-6 right-6 text-5xl font-bold text-gray-100 group-hover:text-[#B8934A]/10 transition duration-500">
-                  0{i + 1}
-                </div>
-
-                {/* Title */}
-                <h3 className="font-display text-2xl mb-4 relative z-10 group-hover:text-[#B8934A] transition-colors duration-300">
-                  {s.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-sm sm:text-[15px] text-gray-500 leading-7 relative z-10">
-                  {s.desc}
-                </p>
-
-                {/* Bottom Arrow */}
-                <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-[#B8934A] opacity-100 lg:opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-                  Learn More →
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── WHY US ── */}
-      <section className="pb-10 lg:pb-20 bg-white relative overflow-hidden">
+      <section className="py-10 lg:py-20 bg-white relative overflow-hidden">
         {/* Background Glow */}
         <div className="absolute top-0 right-0 w-56 sm:w-72 lg:w-96 h-56 sm:h-72 lg:h-96 rounded-full bg-[radial-gradient(circle,rgba(184,147,74,0.08)_0%,transparent_70%)]" />
 

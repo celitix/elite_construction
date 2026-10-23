@@ -1,7 +1,5 @@
 "use client";
 import { useState } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import {
   HiOutlineLocationMarker,
   HiOutlinePhone,
@@ -42,6 +40,11 @@ const services = [
   "Other",
 ];
 
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919876543210";
+const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+  "12-B, Malviya Nagar, Jaipur, Rajasthan 302017"
+)}`;
+
 export default function ContactPage() {
   const [form, setForm] = useState({
     name: "",
@@ -56,13 +59,28 @@ export default function ContactPage() {
   const handleChange = (e) =>
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
+  // Hand the enquiry off to WhatsApp, same as the consultation popup.
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      setSent(true);
-    }, 1800);
+
+    const whatsappMessage = [
+      "Hello, I would like to book a free consultation.",
+      `Name: ${form.name.trim()}`,
+      `Mobile: ${form.phone.trim()}`,
+      `Email: ${form.email.trim()}`,
+      form.service ? `Service: ${form.service}` : null,
+      form.message.trim() ? `Message: ${form.message.trim()}` : null,
+    ].filter(Boolean).join("\n");
+
+    window.open(
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`,
+      "_blank",
+      "noopener,noreferrer"
+    );
+
+    setLoading(false);
+    setSent(true);
   };
 
   return (
@@ -83,7 +101,7 @@ export default function ContactPage() {
           <div className="section-tag text-xs sm:text-sm">Get In Touch</div>
 
           <h1 className="font-display text-[clamp(2.3rem,7vw,5.5rem)] font-semibold text-gray-900 leading-tight">
-            Let's <span className="text-[#B8934A] italic">Connect</span>
+            Let&apos;s <span className="text-[#B8934A] italic">Connect</span>
           </h1>
         </div>
       </section>
@@ -151,12 +169,12 @@ export default function ContactPage() {
                     <div className="text-5xl mb-5">✅</div>
 
                     <h3 className="font-display text-3xl sm:text-[2rem] text-gray-900 mb-3">
-                      Message Sent!
+                      Almost Done!
                     </h3>
 
                     <p className="text-sm sm:text-base text-gray-600 mb-8">
-                      Thank you for reaching out. Our team will contact you
-                      within 24 hours.
+                      Your enquiry has opened in WhatsApp. Press send there and
+                      our team will contact you within 24 hours.
                     </p>
 
                     <button
@@ -182,7 +200,7 @@ export default function ContactPage() {
                     </h3>
 
                     <p className="text-sm text-gray-500 mb-8 sm:mb-10">
-                      Fill out the form and we'll get back to you within 24
+                      Fill out the form and we&apos;ll get back to you within 24
                       hours.
                     </p>
 
@@ -316,9 +334,9 @@ export default function ContactPage() {
 
           {/* Button */}
           <a
-            href="https://maps.google.com"
+            href={MAPS_URL}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center mt-6 px-8 py-4 border border-[#B8934A]/40 text-sm font-semibold tracking-wide rounded-full hover:bg-[#B8934A] hover:text-black transition-all duration-300 shadow-lg"
           >
             Open in Maps →

@@ -438,7 +438,7 @@ const Page = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 text-center relative z-10">
           {/* Heading */}
           <h2 className="font-display text-[clamp(1.8rem,5vw,3rem)] font-bold text-gray-900 leading-tight mb-4">
-            Let's Build Something{" "}
+            Let&apos;s Build Something{" "}
             <span className="text-[#B8934A]">Great Together</span>
           </h2>
 

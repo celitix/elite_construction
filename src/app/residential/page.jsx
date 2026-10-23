@@ -223,7 +223,7 @@ const Page = () => {
                 over each phase of the build. Right from the planning stage and
                 throughout final handover, we are in constant touch with clients
                 to ensure execution is as per requirements. <br />
-                With our years of experience, we offer a home that won't just
+                With our years of experience, we offer a home that won&apos;t just
                 give you peace and comfort but will stand the test of time to
                 provide premium living. With us, you get trusted residential
                 construction services in Jaipur.
@@ -447,7 +447,7 @@ const Page = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 text-center relative z-10">
           {/* Heading */}
           <h2 className="font-display text-[clamp(1.8rem,5vw,3rem)] font-bold text-gray-900 leading-tight mb-4">
-            Let's Build Something{" "}
+            Let&apos;s Build Something{" "}
             <span className="text-[#B8934A]">Great Together</span>
           </h2>
 

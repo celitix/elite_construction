@@ -25,7 +25,7 @@ export default function NotFound() {
 
         {/* Description */}
         <p className="text-sm sm:text-base text-gray-600 leading-7 max-w-xl mx-auto mb-8">
-          The page you're looking for doesn’t exist or may have been moved.
+          The page you&apos;re looking for doesn’t exist or may have been moved.
           Let’s guide you back to something beautifully built.
         </p>
 

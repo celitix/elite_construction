@@ -151,18 +151,18 @@ const START_Y = 70;
 const Service = () => {
   const [active, setActive] = useState(0);
 
-  // AUTO SLIDE
+  const nextSlide = () => {
+    setActive((prev) => (prev + 1) % slides.length);
+  };
+
+  // AUTO SLIDE (restarts the timer whenever the slide changes, incl. manual nav)
   useEffect(() => {
     const interval = setInterval(() => {
-      nextSlide();
+      setActive((prev) => (prev + 1) % slides.length);
     }, 3000);
 
     return () => clearInterval(interval);
   }, [active]);
-
-  const nextSlide = () => {
-    setActive((prev) => (prev + 1) % slides.length);
-  };
 
   const prevSlide = () => {
     setActive((prev) => (prev - 1 + slides.length) % slides.length);
@@ -896,7 +896,7 @@ const Service = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 text-center relative z-10">
           {/* Heading */}
           <h2 className="font-display text-[clamp(1.8rem,5vw,3rem)] font-bold text-gray-900 leading-tight mb-4">
-            Let's Build Something{" "}
+            Let&apos;s Build Something{" "}
             <span className="text-[#B8934A]">Great Together</span>
           </h2>
 

@@ -154,11 +154,11 @@ const Page = () => {
               {/* Paragraph */}
               <p className="text-gray-600 text-base sm:text-lg leading-7 text-justify">
                 Whether it is a simple living room or an elegantly designed
-                bedroom, modular kitchens to designers' office interiors, we
+                bedroom, modular kitchens to designers&apos; office interiors, we
                 decorate the simplest of spaces through creative interiors and
                 elegant décor using premium materials and customized furniture
                 solutions. We create interiors that represent luxury & creative
-                functionality with today's trend of living style in a homely
+                functionality with today&apos;s trend of living style in a homely
                 manner, and also a modern approach to designing homes&
                 commercial spaces in Jaipur.
               </p>
@@ -441,7 +441,7 @@ const Page = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 text-center relative z-10">
           {/* Heading */}
           <h2 className="font-display text-[clamp(1.8rem,5vw,3rem)] font-bold text-gray-900 leading-tight mb-4">
-            Let's Build Something{" "}
+            Let&apos;s Build Something{" "}
             <span className="text-[#B8934A]">Great Together</span>
           </h2>
 

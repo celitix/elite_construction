@@ -127,7 +127,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { FaChevronDown, FaTimes } from "react-icons/fa";
 
-export default function Navbar() {
+export default function Navbar({onConsultClick}) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [serviceOpen, setServiceOpen] = useState(false);
@@ -145,17 +145,16 @@ export default function Navbar() {
 
   // Prevent body scroll when mobile menu open
   useEffect(() => {
-    if (menuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+    if (!menuOpen) return;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [menuOpen]);
 
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
-    { href: "/projects", label: "Projects" },
   ];
 
   const services = [
@@ -166,23 +165,27 @@ export default function Navbar() {
     { label: "Consultation", href: "/consultation" },
   ];
 
+  const isServiceActive =
+    pathname === "/service" || services.some((s) => s.href === pathname);
+
   return (
     <>
       {/* NAVBAR */}
       <nav
         className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-          scrolled ? "bg-white shadow-md py-3" : "bg-white py-5"
+          scrolled ? "bg-white shadow-md py-2" : "bg-white py-2"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* LOGO */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/ELITE-builcare-logo-black.png"
+              src="/ELITE-buildcare-logo-gold.png"
               alt="Logo"
               width={220}
               height={70}
-              className="w-[170px] sm:w-[210px] h-auto"
+              className="w-[80px]  h-auto"
+              priority
             />
           </Link>
 
@@ -202,7 +205,7 @@ export default function Navbar() {
               </Link>
             ))}
 
-            {/* SERVICES DROPDOWN */}
+             {/* SERVICES DROPDOWN */}
             <div
               className="relative"
               onMouseEnter={() => setServiceOpen(true)}
@@ -211,7 +214,7 @@ export default function Navbar() {
               <Link
                 href="/service"
                 className={`flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.18em] transition duration-300 ${
-                  pathname === "/services"
+                  isServiceActive
                     ? "text-[#B8934A]"
                     : "text-black hover:text-[#B8934A]"
                 }`}
@@ -226,23 +229,39 @@ export default function Navbar() {
 
               {/* DROPDOWN */}
               <div
-                className={`absolute left-0 top-full mt-5 w-[280px] bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 origin-top ${
+                className={`absolute left-0 top-full pt-5 w-[280px] transition-all duration-300 origin-top ${
                   serviceOpen
                     ? "opacity-100 visible translate-y-0"
                     : "opacity-0 invisible -translate-y-3"
                 }`}
               >
-                {services.map((service) => (
-                  <Link
-                    key={service.href}
-                    href={service.href}
-                    className="block px-6 py-4 text-sm font-medium text-gray-700 border-b border-gray-100 hover:bg-[#B8934A] hover:text-white transition-all duration-300"
-                  >
-                    {service.label}
-                  </Link>
-                ))}
+                <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                  {services.map((service) => (
+                    <Link
+                      key={service.href}
+                      href={service.href}
+                      onClick={() => setServiceOpen(false)}
+                      className="block px-6 py-4 text-sm font-medium text-gray-700 border-b border-gray-100 hover:bg-[#B8934A] hover:text-white transition-all duration-300"
+                    >
+                      {service.label}
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
+
+            <Link
+              href="/projects"
+              className={`relative text-[13px] font-semibold uppercase tracking-[0.18em] transition duration-300 ${
+                pathname === "/projects"
+                  ? "text-[#B8934A]"
+                  : "text-black hover:text-[#B8934A]"
+              }`}
+            >
+              Projects
+            </Link>
+
+           
 
             {/* CONTACT */}
             <Link
@@ -257,18 +276,25 @@ export default function Navbar() {
             </Link>
 
             {/* BUTTON */}
-            <Link
+            {/* <Link
               href="/contact"
               className="btn-primary !py-3 !px-6 !text-[0.62rem]"
             >
               Free Consultation
-            </Link>
+            </Link> */}
+            <button
+          onClick={onConsultClick}
+          className="hidden md:block bg-[#B8934A] text-white text-xs font-semibold tracking-[2px] uppercase px-5 py-2.5 hover:bg-[#9c7734] transition-colors"
+        >
+          Free Consultation
+        </button>
           </div>
 
           {/* MOBILE TOGGLE */}
           <button
             onClick={() => setMenuOpen(true)}
             className="lg:hidden flex flex-col gap-[5px]"
+            aria-label="Open menu"
           >
             <span className="w-7 h-[2px] bg-[#B8934A]"></span>
             <span className="w-7 h-[2px] bg-[#B8934A]"></span>
@@ -294,19 +320,19 @@ export default function Navbar() {
         {/* HEADER */}
         <div className="flex items-center justify-between p-6 border-b border-gray-200">
           <Image
-            src="/ELITE-builcare-logo-black.png"
+            src="/ELITE-buildcare-logo-gold.png"
             alt="Logo"
-            width={160}
+            width={80}
             height={60}
           />
 
-          <button onClick={() => setMenuOpen(false)}>
+          <button onClick={() => setMenuOpen(false)} aria-label="Close menu">
             <FaTimes className="text-2xl text-[#B8934A]" />
           </button>
         </div>
 
         {/* MENU */}
-        <div className="flex flex-col p-6">
+        <div className="flex flex-col px-6">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -327,7 +353,9 @@ export default function Navbar() {
 
     <Link
       href="/service"
-      className="text-[15px] text-black font-semibold uppercase tracking-[0.12em]"
+      className={`text-[15px] font-semibold uppercase tracking-[0.12em] ${
+        isServiceActive ? "text-[#B8934A]" : "text-black"
+      }`}
       onClick={() => setMenuOpen(false)}
     >
       Services
@@ -335,6 +363,8 @@ export default function Navbar() {
 
     <button
       onClick={() => setMobileServiceOpen(!mobileServiceOpen)}
+      aria-label="Toggle services"
+      aria-expanded={mobileServiceOpen}
     >
       <FaChevronDown
         className={`transition-transform duration-300 ${
@@ -367,6 +397,17 @@ export default function Navbar() {
 
 </div>
 
+          {/* PROJECTS */}
+          <Link
+            href="/projects"
+            onClick={() => setMenuOpen(false)}
+            className={`py-4 border-b border-gray-100 text-[15px] font-semibold uppercase tracking-[0.12em] ${
+              pathname === "/projects" ? "text-[#B8934A]" : "text-black"
+            }`}
+          >
+            Projects
+          </Link>
+
           {/* CONTACT */}
           <Link
             href="/contact"
@@ -379,13 +420,15 @@ export default function Navbar() {
           </Link>
 
           {/* BUTTON */}
-          <Link
-            href="/contact"
-            onClick={() => setMenuOpen(false)}
+          <button
+            onClick={() => {
+              setMenuOpen(false);
+              onConsultClick?.();
+            }}
             className="mt-8 bg-[#B8934A] hover:bg-[#a8853f] text-white text-center text-sm uppercase tracking-[0.15em] font-semibold px-6 py-4 rounded-full transition-all duration-300"
           >
             Free Consultation
-          </Link>
+          </button>
         </div>
       </div>
     </>
