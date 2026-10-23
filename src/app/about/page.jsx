@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Testimonials from "../components/Testimonials";
 
 export const metadata = { title: "About Us | Elite Infra" };
 
@@ -34,7 +35,11 @@ const team = [
   { name: "Rajesh Sharma", role: "Founder & CEO", exp: "20+ years" },
   { name: "Priya Agarwal", role: "Chief Architect", exp: "15+ years" },
   { name: "Vikram Singh", role: "Head of Construction", exp: "18+ years" },
-  { name: "Anita Meena", role: "Interior Design Lead", exp: "12+ years" },
+  {
+    name: "Anita Meena",
+    role: "Turnkey Interior Design Lead",
+    exp: "12+ years",
+  },
 ];
 
 const milestones = [
@@ -69,25 +74,18 @@ const values = [
   },
 ];
 
-
 const projects = [
   {
-    name: "Skyline Residences",
-    type: "Luxury Apartments",
-    loc: "Vaishali Nagar, Jaipur",
-    img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80",
+    name: "Elegant Heights",
+    img: "/Projects/OurProjects/ElegantHeights.png",
   },
   {
-    name: "The Heritage Villas",
-    type: "Premium Villas",
-    loc: "Jagatpura, Jaipur",
-    img: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600&q=80",
+    name: "Ram Ratna",
+    img: "/Projects/OurProjects/RamRatna.png",
   },
   {
-    name: "Axis Business Park",
-    type: "Commercial Complex",
-    loc: "Sitapura, Jaipur",
-    img: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
+    name: "Surya Nagar",
+    img: "/Projects/Residential/suryaNagar.png",
   },
 ];
 
@@ -133,11 +131,9 @@ export default function AboutPage() {
               <div className="section-tag text-xs sm:text-sm">Who We Are</div>
 
               <h2 className="font-display text-[clamp(1.8rem,5vw,3rem)] mb-5 font-bold text-gray-900 leading-tight">
-                Trusted Construction & 
+                Trusted Construction &
                 <br />
-                <span className="text-[#B8934A]">
-                  Design Experts
-                </span>
+                <span className="text-[#B8934A]">Design Experts</span>
               </h2>
 
               <p className="text-sm sm:text-[0.95rem] text-gray-600 text-justify leading-6">
@@ -313,12 +309,12 @@ export default function AboutPage() {
       </section>
 
       {/* TEAM */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-[#fafafa] via-white to-[#f8f8f8] relative overflow-hidden">
-        {/* Background Glow */}
+      {/* <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-[#fafafa] via-white to-[#f8f8f8] relative overflow-hidden">
+        
         <div className="absolute top-0 left-0 w-64 sm:w-80 h-64 sm:h-80 rounded-full bg-[radial-gradient(circle,rgba(184,147,74,0.08)_0%,transparent_70%)]" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
-          {/* Heading */}
+         
           <div className="text-center mb-12 sm:mb-14 lg:mb-16">
             <div className="section-tag justify-center text-xs sm:text-sm">
               Meet the Experts
@@ -329,41 +325,41 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          {/* Team Grid */}
+         
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 sm:gap-7">
             {team.map((t, i) => (
               <div
                 key={i}
                 className="group text-center bg-gray-50 border border-gray-200 rounded-2xl p-5 sm:p-6 hover:-translate-y-2 hover:shadow-2xl hover:border-[#B8934A]/40 transition-all duration-500"
               >
-                {/* Image Box */}
+            
                 <div className="relative w-full aspect-square rounded-2xl bg-gradient-to-br from-[#f3f3f3] to-[#e5e5e5] mb-5 overflow-hidden">
-                  {/* Avatar */}
+             
                   <div className="absolute inset-0 flex items-center justify-center text-[3.5rem] sm:text-[4rem] group-hover:scale-110 transition duration-500">
                     👤
                   </div>
 
-                  {/* Bottom Accent */}
+                  
                   <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#B8934A] to-[#D4A85A]" />
                 </div>
 
-                {/* Name */}
+                
                 <h3 className="font-display text-xl sm:text-2xl text-gray-900 mb-1.5 group-hover:text-[#B8934A] transition-colors duration-300">
                   {t.name}
                 </h3>
 
-                {/* Role */}
+                
                 <div className="text-[11px] sm:text-xs font-bold tracking-[0.15em] uppercase text-[#B8934A] mb-1">
                   {t.role}
                 </div>
 
-                {/* Experience */}
+                
                 <div className="text-sm text-gray-500">{t.exp} Experience</div>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* TIMELINE */}
       <section className="py-10 lg:py-20 bg-white text-gray-900 relative overflow-hidden">
@@ -415,6 +411,9 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ── TESTIMONIALS ── */}
+      <Testimonials />
+
       {/* ── FEATURED PROJECTS ── */}
       <section className="py-10 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
@@ -445,27 +444,9 @@ export default function AboutPage() {
 
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
-                  <div className="text-[10px] sm:text-[0.62rem] font-bold tracking-[0.2em] uppercase text-[#B8934A] mb-1.5">
-                    {p.type}
-                  </div>
-
                   <h3 className="font-display text-xl sm:text-2xl text-white leading-tight">
                     {p.name}
                   </h3>
-
-                  <div className="text-xs sm:text-sm text-white/70 mt-1">
-                    📍 {p.loc}
-                  </div>
-                </div>
-
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-[#B8934A]/15 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
-                  <Link
-                    href="/projects"
-                    className="text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase text-white border border-white px-5 sm:px-7 py-3 hover:bg-white hover:text-black transition"
-                  >
-                    View Details
-                  </Link>
                 </div>
               </div>
             ))}

@@ -6,26 +6,20 @@ import { motion } from "framer-motion";
 import { FaArrowUp } from "react-icons/fa6";
 const Page = () => {
   const [activeTab, setActiveTab] = useState(1);
-  const projects = [
-    {
-      name: "Skyline Residences",
-      type: "Luxury Apartments",
-      loc: "Vaishali Nagar, Jaipur",
-      img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80",
-    },
-    {
-      name: "The Heritage Villas",
-      type: "Premium Villas",
-      loc: "Jagatpura, Jaipur",
-      img: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600&q=80",
-    },
-    {
-      name: "Axis Business Park",
-      type: "Commercial Complex",
-      loc: "Sitapura, Jaipur",
-      img: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
-    },
-  ];
+ const projects = [
+  {
+    name: "Elegant Heights",
+    img: "/Projects/OurProjects/ElegantHeights.png",
+  },
+  {
+    name: "Ram Ratna",
+    img: "/Projects/OurProjects/RamRatna.png",
+  },
+  {
+    name: "Surya Nagar",
+    img: "/Projects/Residential/suryaNagar.png",
+  },
+];
 
   const cards = [
     {
@@ -54,11 +48,11 @@ const Page = () => {
     },
     {
       id: "03",
-      title: "Interior Design & Space Consultation",
+      title: "Turnkey Interior Design & Space Consultation",
       description:
-        "A professional interior designer translates elegance and function into your interiors from Elite Construction & Interior Design. We guide clients to choose the top design ideas, furniture arrangements, lighting systems, and solutions, color schemes, textures, and how you are living in space or managing your business. At Jaipur's best interior consultants, we try to merge aesthetics with comfort and functionality so as to create spaces that will withstand the test of time. That’s why we are the best  Interior Design & Space Consultation service provider in Jaipur.",
+        "A professional turnkey interior designer translates elegance and function into your interiors from Elite Construction & Interior Design. We guide clients to choose the top design ideas, furniture arrangements, lighting systems, and solutions, color schemes, textures, and how you are living in space or managing your business. At Jaipur's best interior consultants, we try to merge aesthetics with comfort and functionality so as to create spaces that will withstand the test of time. That’s why we are the best turnkey Interior Design & Space Consultation service provider in Jaipur.",
       btnLabel: "Learn More",
-      url: "/interior-design",
+      url: "/turnkey-interior-design",
       img: "/Consultation/consultationSthree.png",
       alt: "img3",
       stickyOffset: 210,
@@ -134,7 +128,7 @@ const Page = () => {
               </h3>
 
               <p className="text-[16px] sm:text-[17px] md:text-[18px] leading-[1.5] text-white/95 max-w-[600px] mx-auto lg:mx-0 mb-2 text-justify">
-                Elite Construction & Interior Design provides expert
+                Elite Construction & Turnkey Interior Design provides expert
                 construction consulting services in Jaipur to plan, develop a
                 design, and execute your residential, commercial, and interior
                 projects; all of which follow the Stress-free Path! Be it a
@@ -241,7 +235,7 @@ const Page = () => {
 
           {/* Projects Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-6 lg:gap-7">
-            {projects.map((p, i) => (
+             {projects.map((p, i) => (
               <div
                 key={i}
                 className="relative overflow-hidden rounded-2xl cursor-pointer group shadow-md hover:shadow-2xl transition-all duration-500"
@@ -255,28 +249,16 @@ const Page = () => {
 
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
-                  <div className="text-[10px] sm:text-[0.62rem] font-bold tracking-[0.2em] uppercase text-[#B8934A] mb-1.5">
-                    {p.type}
-                  </div>
+                  
 
                   <h3 className="font-display text-xl sm:text-2xl text-white leading-tight">
                     {p.name}
                   </h3>
 
-                  <div className="text-xs sm:text-sm text-white/70 mt-1">
-                    📍 {p.loc}
-                  </div>
+                 
                 </div>
 
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-[#B8934A]/15 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
-                  <Link
-                    href="/projects"
-                    className="text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase text-white border border-white px-5 sm:px-7 py-3 hover:bg-white hover:text-black transition"
-                  >
-                    View Details
-                  </Link>
-                </div>
+               
               </div>
             ))}
           </div>

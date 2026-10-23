@@ -161,8 +161,8 @@ export default function Navbar({onConsultClick}) {
     { label: "Residential", href: "/residential" },
     { label: "Commercial", href: "/commercial" },
     { label: "Renovation", href: "/renovation" },
-    { label: "Interior Design", href: "/interior-design" },
     { label: "Consultation", href: "/consultation" },
+    { label: "Turnkey Interior Design", href: "/turnkey-interior-design" },
   ];
 
   const isServiceActive =
@@ -229,7 +229,7 @@ export default function Navbar({onConsultClick}) {
 
               {/* DROPDOWN */}
               <div
-                className={`absolute left-0 top-full pt-5 w-[280px] transition-all duration-300 origin-top ${
+                className={`absolute left-0 top-full pt-5 w-[200px] transition-all duration-300 origin-top ${
                   serviceOpen
                     ? "opacity-100 visible translate-y-0"
                     : "opacity-0 invisible -translate-y-3"

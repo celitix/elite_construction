@@ -34,7 +34,7 @@ const services = [
   "Residential Construction",
   "Commercial Construction",
   "Renovation & Remodeling",
-  "Interior Design",
+  "Turnkey Interior Design",
   "Architecture & Planning",
   "Turnkey Solution",
   "Other",

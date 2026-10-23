@@ -4,25 +4,19 @@ import React from "react";
 
 const Page = () => {
   const projects = [
-    {
-      name: "Skyline Residences",
-      type: "Luxury Apartments",
-      loc: "Vaishali Nagar, Jaipur",
-      img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80",
-    },
-    {
-      name: "The Heritage Villas",
-      type: "Premium Villas",
-      loc: "Jagatpura, Jaipur",
-      img: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600&q=80",
-    },
-    {
-      name: "Axis Business Park",
-      type: "Commercial Complex",
-      loc: "Sitapura, Jaipur",
-      img: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
-    },
-  ];
+  {
+    name: "Elegant Heights",
+    img: "/Projects/OurProjects/ElegantHeights.png",
+  },
+  {
+    name: "Ram Ratna",
+    img: "/Projects/OurProjects/RamRatna.png",
+  },
+  {
+    name: "Surya Nagar",
+    img: "/Projects/Residential/suryaNagar.png",
+  },
+];
   return (
     <div>
       <section className="relative overflow-hidden bg-[#f7f3eb] pb-0 md:pb-16">
@@ -76,11 +70,11 @@ const Page = () => {
             {/* RIGHT CONTENT */}
             <div className="text-white text-center lg:text-left">
               <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-[1.1] mb-5">
-                Luxury Interior Design Services in Jaipur
+                Luxury Turnkey Interior Design Services in Jaipur
               </h3>
 
               <p className="text-[16px] sm:text-[17px] md:text-[18px] leading-[1.5] text-white/95 max-w-[600px] mx-auto lg:mx-0 mb-2 text-justify">
-                Elite Construction offers luxurious interior design in Jaipur
+                Elite Construction offers luxurious turnkey interior design in Jaipur
                 for contemporary lifestyle homes and offices. We design graceful
                 and functional interiors, separately customized to give maximum
                 within the given space, with innovative space-planning solutions
@@ -131,7 +125,7 @@ const Page = () => {
                 Our designs strike the right balance between aesthetics,
                 comfort, and smart space utilization. With specialization in
                 Modern Layouts, Quality Finishes & Customised Themes as per your
-                lifestyle and preferences, our Professional Interior Designers
+                lifestyle and preferences, our Professional Turnkey Interior Designers
                 strive for the best. Every detail is planned, so with the color
                 combinations, placement of furniture, lighting, and décor
                 styling, to create a visually pleasant and cozy environment
@@ -200,7 +194,7 @@ const Page = () => {
 
               {/* Paragraph */}
               <p className="text-gray-600 text-base sm:text-lg leading-7 text-justify">
-                Elite Construction offers innovative interior design services in
+                Elite Construction offers innovative turnkey interior design services in
                 Jaipur, focusing on details from quality craftsmanship to
                 contemporary design trends that enhance both beauty and
                 functionality. We aim to make the most of the possible space,
@@ -232,7 +226,7 @@ const Page = () => {
             leading-tight
           "
             >
-              Interior Design Highlights
+              Turnkey Interior Design Highlights
             </h2>
 
             <div className="w-24 h-[2px] bg-[#B8934A] mx-auto mt-5 rounded-full"></div>
@@ -321,7 +315,7 @@ const Page = () => {
               >
                 We provide exclusive décor ideas, arrangements, lighting
                 solutions, and custom themes that turn lavish interiors through
-                our interior design services.
+                our turnkey interior design services.
               </p>
             </div>
 
@@ -357,7 +351,7 @@ const Page = () => {
             "
               >
                 Modular kitchens & Wardrobes, False ceiling style, and wall
-                texture. Get a customized interior design that fits your
+                texture. Get a customized turnkey interior design that fits your
                 lifestyle best!
               </p>
             </div>
@@ -381,7 +375,7 @@ const Page = () => {
 
           {/* Projects Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-6 lg:gap-7">
-            {projects.map((p, i) => (
+             {projects.map((p, i) => (
               <div
                 key={i}
                 className="relative overflow-hidden rounded-2xl cursor-pointer group shadow-md hover:shadow-2xl transition-all duration-500"
@@ -395,28 +389,16 @@ const Page = () => {
 
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
-                  <div className="text-[10px] sm:text-[0.62rem] font-bold tracking-[0.2em] uppercase text-[#B8934A] mb-1.5">
-                    {p.type}
-                  </div>
+                  
 
                   <h3 className="font-display text-xl sm:text-2xl text-white leading-tight">
                     {p.name}
                   </h3>
 
-                  <div className="text-xs sm:text-sm text-white/70 mt-1">
-                    📍 {p.loc}
-                  </div>
+                 
                 </div>
 
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-[#B8934A]/15 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
-                  <Link
-                    href="/projects"
-                    className="text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase text-white border border-white px-5 sm:px-7 py-3 hover:bg-white hover:text-black transition"
-                  >
-                    View Details
-                  </Link>
-                </div>
+               
               </div>
             ))}
           </div>

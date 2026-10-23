@@ -3,26 +3,20 @@ import Link from "next/link";
 import React from "react";
 
 const Page = () => {
-  const projects = [
-    {
-      name: "Skyline Residences",
-      type: "Luxury Apartments",
-      loc: "Vaishali Nagar, Jaipur",
-      img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80",
-    },
-    {
-      name: "The Heritage Villas",
-      type: "Premium Villas",
-      loc: "Jagatpura, Jaipur",
-      img: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600&q=80",
-    },
-    {
-      name: "Axis Business Park",
-      type: "Commercial Complex",
-      loc: "Sitapura, Jaipur",
-      img: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
-    },
-  ];
+ const projects = [
+  {
+    name: "Elegant Heights",
+    img: "/Projects/OurProjects/ElegantHeights.png",
+  },
+  {
+    name: "Ram Ratna",
+    img: "/Projects/OurProjects/RamRatna.png",
+  },
+  {
+    name: "Surya Nagar",
+    img: "/Projects/Residential/suryaNagar.png",
+  },
+];
   return (
     <div>
       <section className="relative overflow-hidden bg-[#f7f3eb] pb-5 md:pb-16">
@@ -408,28 +402,16 @@ const Page = () => {
 
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
-                  <div className="text-[10px] sm:text-[0.62rem] font-bold tracking-[0.2em] uppercase text-[#B8934A] mb-1.5">
-                    {p.type}
-                  </div>
+                  
 
                   <h3 className="font-display text-xl sm:text-2xl text-white leading-tight">
                     {p.name}
                   </h3>
 
-                  <div className="text-xs sm:text-sm text-white/70 mt-1">
-                    📍 {p.loc}
-                  </div>
+                 
                 </div>
 
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-[#B8934A]/15 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
-                  <Link
-                    href="/projects"
-                    className="text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase text-white border border-white px-5 sm:px-7 py-3 hover:bg-white hover:text-black transition"
-                  >
-                    View Details
-                  </Link>
-                </div>
+               
               </div>
             ))}
           </div>

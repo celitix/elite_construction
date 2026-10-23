@@ -173,7 +173,7 @@ const Service = () => {
       id: "1",
       title: "Residential Construction Services",
       description:
-        "We create stylish homes that offer a combination of beautiful architecture, robust construction, and practical interior design. Whether you prefer a lavish villa or want a customized home, we provide homes that suit your lifestyle and requirements at Elite Construction Jaipur.",
+        "We create stylish homes that offer a combination of beautiful architecture, robust construction, and practical turnkey interior design. Whether you prefer a lavish villa or want a customized home, we provide homes that suit your lifestyle and requirements at Elite Construction Jaipur.",
       points: [
         "New Home Construction",
         "Construction of Luxury Villas",
@@ -191,7 +191,7 @@ const Service = () => {
         "We provide commercial building services that aim to increase efficiency and promote growth. At Elite Construction Jaipur, our focus is on developing office spaces, shops, cafes, and other commercial buildings with high-quality materials and innovative designs.",
       points: [
         "Office Building Construction ",
-        "Interior Design of Retail Shops and Showrooms",
+        "Turnkey Interior Design of Retail Shops and Showrooms",
         "Commercial Building Renovation",
         "Structural and Civil Work Solutions",
         "Workplace Design and Planning",
@@ -216,17 +216,17 @@ const Service = () => {
     },
     {
       id: "4",
-      title: "Interior Design Services",
+      title: "Turnkey Interior Design Services",
       description:
-        "The interior design services offered by Elite Construction Jaipur provide the perfect combination of creativity and luxury in the interior decoration of any space. Be it home, office, or any other type of space, our professionals work with custom designs to create stylish interiors.",
+        "The turnkey interior design services offered by Elite Construction Jaipur provide the perfect combination of creativity and luxury in the interior decoration of any space. Be it home, office, or any other type of space, our professionals work with custom designs to create stylish interiors.",
       points: [
         "Modular Kitchen Designs",
-        "Bedrooms & Living Room Interior Designs",
-        "Office Interior Design Services",
+        "Bedrooms & Living Room Turnkey Interior Designs",
+        "Office Turnkey Interior Design Services",
         "Design Furniture and Decor Ideas",
         "Luxury Interior Styling",
       ],
-      url: "/interior-design",
+      url: "/turnkey-interior-design",
       image: "/Services/ServicesTFour.png",
     },
     {
@@ -263,25 +263,19 @@ const Service = () => {
   });
 
   const projects = [
-    {
-      name: "Skyline Residences",
-      type: "Luxury Apartments",
-      loc: "Vaishali Nagar, Jaipur",
-      img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80",
-    },
-    {
-      name: "The Heritage Villas",
-      type: "Premium Villas",
-      loc: "Jagatpura, Jaipur",
-      img: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600&q=80",
-    },
-    {
-      name: "Axis Business Park",
-      type: "Commercial Complex",
-      loc: "Sitapura, Jaipur",
-      img: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
-    },
-  ];
+  {
+    name: "Elegant Heights",
+    img: "/Projects/OurProjects/ElegantHeights.png",
+  },
+  {
+    name: "Ram Ratna",
+    img: "/Projects/OurProjects/RamRatna.png",
+  },
+  {
+    name: "Surya Nagar",
+    img: "/Projects/Residential/suryaNagar.png",
+  },
+];
 
   return (
     <div>
@@ -337,7 +331,7 @@ const Service = () => {
             <div className="text-white text-center lg:text-left">
               <h3 className="text-3xl md:text-5xl font-semibold mb-5">
                 Professional Construction
-                <br />& Interior Design Services In Jaipur
+                <br />& Turnkey Interior Design Services In Jaipur
               </h3>
 
               <p className="text-[16px] sm:text-[17px] md:text-[18px] leading-[1.5] text-white/95 max-w-[600px] mx-auto lg:mx-0 mb-2 text-justify">
@@ -373,10 +367,10 @@ const Service = () => {
 
           <p className="mt-2 text-[16px] md:text-[19px] leading-[1.5] text-[#333] max-w-6xl mx-auto">
             Our firm, Elite Construction, provides all kinds of construction and
-            interior design services for residential, commercial, and property
+            turnkey interior design services for residential, commercial, and property
             development clients in Jaipur. Our experts will take care of
             everything from architectural design, civil construction,
-            renovation, to modern interior design services. We are dedicated to
+            renovation, to modern turnkey interior design services. We are dedicated to
             providing high-quality construction services in Jaipur.
           </p>
         </div>
@@ -835,7 +829,7 @@ const Service = () => {
 
           {/* Projects Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-6 lg:gap-7">
-            {projects.map((p, i) => (
+           {projects.map((p, i) => (
               <div
                 key={i}
                 className="relative overflow-hidden rounded-2xl cursor-pointer group shadow-md hover:shadow-2xl transition-all duration-500"
@@ -849,28 +843,16 @@ const Service = () => {
 
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
-                  <div className="text-[10px] sm:text-[0.62rem] font-bold tracking-[0.2em] uppercase text-[#B8934A] mb-1.5">
-                    {p.type}
-                  </div>
+                  
 
                   <h3 className="font-display text-xl sm:text-2xl text-white leading-tight">
                     {p.name}
                   </h3>
 
-                  <div className="text-xs sm:text-sm text-white/70 mt-1">
-                    📍 {p.loc}
-                  </div>
+                 
                 </div>
 
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-[#B8934A]/15 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
-                  <Link
-                    href="/projects"
-                    className="text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase text-white border border-white px-5 sm:px-7 py-3 hover:bg-white hover:text-black transition"
-                  >
-                    View Details
-                  </Link>
-                </div>
+               
               </div>
             ))}
           </div>

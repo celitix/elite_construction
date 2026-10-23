@@ -10,6 +10,7 @@ import {
   HiOutlineClipboardList,
 } from "react-icons/hi";
 import Image from "next/image";
+import Testimonials from "./components/Testimonials";
 
 /* Counter Component */
 const Counter = ({ end, suffix = "" }) => {
@@ -118,15 +119,15 @@ const services = [
   },
   {
     image: "/Home/homeInteriorDesign.png",
-    title: "Interior Design",
+    title: "Turnkey Interior Design",
     desc: "Luxurious interiors that blend aesthetics with functionality.",
-    href: "/interior-design",
+    href: "/turnkey-interior-design",
   },
   {
     image: "/Home/homeArchitecturePlanning.png",
     title: "Architecture & Planning",
     desc: "Innovative designs tailored to your vision and lifestyle.",
-    href: "/interior-design",
+    href: "/turnkey-interior-design",
   },
   {
     image: "/Home/homeTurnkeySolutions.png",
@@ -138,22 +139,16 @@ const services = [
 
 const projects = [
   {
-    name: "Skyline Residences",
-    type: "Luxury Apartments",
-    loc: "Vaishali Nagar, Jaipur",
-    img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80",
+    name: "Elegant Heights",
+    img: "/Projects/OurProjects/ElegantHeights.png",
   },
   {
-    name: "The Heritage Villas",
-    type: "Premium Villas",
-    loc: "Jagatpura, Jaipur",
-    img: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600&q=80",
+    name: "Ram Ratna",
+    img: "/Projects/OurProjects/RamRatna.png",
   },
   {
-    name: "Axis Business Park",
-    type: "Commercial Complex",
-    loc: "Sitapura, Jaipur",
-    img: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
+    name: "Surya Nagar",
+    img: "/Projects/Residential/suryaNagar.png",
   },
 ];
 
@@ -192,16 +187,16 @@ export default function HomePage() {
       >
         <div className="relative z-10 w-full max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-20 pt-10 lg:pt-40">
           <div className="max-w-x">
-            <h3 className="text-sm md:text-base lg:text-2xl font-semibold text-black uppercase tracking-widest">
-              We Create Your
+            <h3 className="text-sm md:text-base lg:text-xl font-semibold text-black uppercase tracking-widest">
+             Jaipur’s 
             </h3>
 
-            <h1 className="mt-1 text-4xl md:text-5xl lg:text-6xl font-black text-[#b8984a] leading-tight">
-              &ldquo;Perfect Home&rdquo;
+            <h1 className="mt-1 text-4xl font-black text-[#b8984a] leading-tight">
+              &ldquo;Best Construction Company&rdquo;
             </h1>
 
             <p className="mt-2 text-base md:text-lg text-black">
-              Turn-key Construction & Design Solutions
+              Turnkey Homes, Villas & Commercial Spaces
             </p>
 
             <div className="mt-5 flex flex-wrap items-center gap-3">
@@ -801,27 +796,9 @@ export default function HomePage() {
 
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
-                  <div className="text-[10px] sm:text-[0.62rem] font-bold tracking-[0.2em] uppercase text-[#B8934A] mb-1.5">
-                    {p.type}
-                  </div>
-
                   <h3 className="font-display text-xl sm:text-2xl text-white leading-tight">
                     {p.name}
                   </h3>
-
-                  <div className="text-xs sm:text-sm text-white/70 mt-1">
-                    📍 {p.loc}
-                  </div>
-                </div>
-
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-[#B8934A]/15 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
-                  <Link
-                    href="/projects"
-                    className="text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase text-white border border-white px-5 sm:px-7 py-3 hover:bg-white hover:text-black transition"
-                  >
-                    View Details
-                  </Link>
                 </div>
               </div>
             ))}
@@ -838,6 +815,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── TESTIMONIALS ── */}
+      <Testimonials />
 
       <section className="w-full bg-[#f7f7f7] py-10 md:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">

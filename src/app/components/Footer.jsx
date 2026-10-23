@@ -15,8 +15,8 @@ const services = [
   ["Residential", "/residential"],
   ["Commercial", "/commercial"],
   ["Renovation", "/renovation"],
-  ["Interior Design", "/interior-design"],
   ["Consultation", "/consultation"],
+  ["Turnkey Interior Design", "/turnkey-interior-design"],
 ];
 
 const contactItems = [
@@ -101,6 +101,7 @@ export default function Footer() {
         <div className="flex flex-col items-start gap-3 py-5 text-left sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:py-6">
           <p className="w-full text-xs leading-5 text-white/50 sm:w-auto">
             Copyright 2026 Elite Construction. All rights reserved.
+            {/* © 2026 Elite Construction. All rights reserved. Designed by Proactive Professional Services Pvt Ltd */}
           </p>
           <p className="w-full text-xs leading-5 text-white/50 sm:w-auto sm:text-right">
             Designed by{" "}
