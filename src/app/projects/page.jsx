@@ -7,7 +7,7 @@ const projects = [
   {
     id: 1,
     name: "Elegant Heights",
-    type: "Our Projects",
+    type: "Multi-Storey",
     status: "Completed",
     img: "/Projects/OurProjects/ElegantHeights.png",
     desc: "A collection of 48 premium 3 & 4 BHK apartments with rooftop amenities.",
@@ -16,7 +16,7 @@ const projects = [
   {
     id: 2,
     name: "Elite Pride",
-    type: "Our Projects",
+    type: "Multi-Storey",
     status: "Completed",
     img: "/Projects/OurProjects/ElitePride.png",
     desc: "A collection of 48 premium 3 & 4 BHK apartments with rooftop amenities.",
@@ -25,7 +25,7 @@ const projects = [
   {
     id: 3,
     name: "Elite Prime",
-    type: "Our Projects",
+    type: "Multi-Storey",
     status: "Completed",
     img: "/Projects/OurProjects/ElitePrime.png",
     desc: "A collection of 48 premium 3 & 4 BHK apartments with rooftop amenities.",
@@ -34,7 +34,7 @@ const projects = [
   {
     id: 4,
     name: "Ram Ratna",
-    type: "Our Projects",
+    type: "Multi-Storey",
     status: "Completed",
     img: "/Projects/OurProjects/RamRatna.png",
     desc: "A collection of 48 premium 3 & 4 BHK apartments with rooftop amenities.",
@@ -43,7 +43,7 @@ const projects = [
   {
     id: 5,
     name: "Elegant Gaurav",
-    type: "Our Projects",
+    type: "Multi-Storey",
     status: "Completed",
     img: "/Projects/OurProjects/ElegantGaurav.png",
     desc: "A collection of 48 premium 3 & 4 BHK apartments with rooftop amenities.",
@@ -52,7 +52,7 @@ const projects = [
   {
     id: 6,
     name: "Elite Umang",
-    type: "Our Projects",
+    type: "Multi-Storey",
     status: "Completed",
     img: "/Projects/OurProjects/EliteUmang.png",
     desc: "A collection of 48 premium 3 & 4 BHK apartments with rooftop amenities.",
@@ -61,7 +61,7 @@ const projects = [
   {
     id: 7,
     name: "Elite Luxury",
-    type: "Our Projects",
+    type: "Multi-Storey",
     status: "Completed",
     img: "/Projects/OurProjects/EliteLuxory.png",
     desc: "A collection of 48 premium 3 & 4 BHK apartments with rooftop amenities.",
@@ -70,7 +70,7 @@ const projects = [
   {
     id: 8,
     name: "Shopping Complex",
-    type: "Our Projects",
+    type: "Multi-Storey",
     status: "Completed",
     img: "/Projects/OurProjects/ShoppingComplex.png",
     desc: "A collection of 48 premium 3 & 4 BHK apartments with rooftop amenities.",
@@ -78,37 +78,59 @@ const projects = [
   },
   {
     id: 9,
-    name: "Laxmi Nagar",
+    name: "Khatipura",
     type: "Residential",
+    client: "Mr. Vipin Gupta",
     status: "Completed",
-    img: "/Projects/Residential/laxmiNagar.png",
+    img: "/Projects/Residential/khatipura.jpg",
     desc: "A collection of 48 premium 3 & 4 BHK apartments with rooftop amenities.",
+    location: "Jaipur, Rajasthan", // add
+  },
+  {
+    id: 11,
+    name: "Swej Farm",
+    type: "Residential",
+    client: "Mr. Monoj Goyal",
+    status: "Completed",
+    img: "/Projects/Residential/SwejFarm.jpg",
+    desc: "Exclusive gated community of 12 luxury villas with private gardens.",
+    location: "Jaipur, Rajasthan", // add
+  },
+  {
+    id: 12,
+    name: "Govind Nagar",
+    type: "Residential",
+    client: "Mrs. Sunita Sood",
+    status: "Completed",
+    img: "/Projects/Residential/GovindNagar.jpg",
+    desc: "Exclusive gated community of 12 luxury villas with private gardens.",
     location: "Jaipur, Rajasthan", // add
   },
   {
     id: 10,
     name: "Surya Nagar",
     type: "Residential",
+    client: "Mr. Vivek Johari",
     status: "Completed",
     img: "/Projects/Residential/suryaNagar.png",
     desc: "Exclusive gated community of 12 luxury villas with private gardens.",
     location: "Jaipur, Rajasthan", // add
   },
   {
-    id: 11,
-    name: "Nirman Nagar",
+    id: 24,
+    name: "Shyam Nagar",
     type: "Residential",
     status: "Completed",
-    img: "/Projects/Residential/nirmanNagar.png",
+    img: "/Projects/Residential/ShyamNagar.png",
     desc: "Exclusive gated community of 12 luxury villas with private gardens.",
     location: "Jaipur, Rajasthan", // add
   },
   {
-    id: 12,
-    name: "Ram Nagar",
+    id: 25,
+    name: "Jawahar Nagar",
     type: "Residential",
     status: "Completed",
-    img: "/Projects/Residential/ramNagar.png",
+    img: "/Projects/Residential/JawaharNagar.png",
     desc: "Exclusive gated community of 12 luxury villas with private gardens.",
     location: "Jaipur, Rajasthan", // add
   },
@@ -127,6 +149,33 @@ const projects = [
     type: "Residential",
     status: "Completed",
     img: "/Projects/Residential/florenceVillas.png",
+    desc: "Exclusive gated community of 12 luxury villas with private gardens.",
+    location: "Jaipur, Rajasthan", // add
+  },
+  {
+    id: 21,
+    name: "Laxmi Nagar",
+    type: "Residential",
+    status: "Completed",
+    img: "/Projects/Residential/laxmiNagar.png",
+    desc: "A collection of 48 premium 3 & 4 BHK apartments with rooftop amenities.",
+    location: "Jaipur, Rajasthan", // add
+  },
+  {
+    id: 22,
+    name: "Nirman Nagar",
+    type: "Residential",
+    status: "Completed",
+    img: "/Projects/Residential/nirmanNagar.png",
+    desc: "Exclusive gated community of 12 luxury villas with private gardens.",
+    location: "Jaipur, Rajasthan", // add
+  },
+  {
+    id: 23,
+    name: "Ram Nagar",
+    type: "Residential",
+    status: "Completed",
+    img: "/Projects/Residential/ramNagar.png",
     desc: "Exclusive gated community of 12 luxury villas with private gardens.",
     location: "Jaipur, Rajasthan", // add
   },
@@ -177,10 +226,10 @@ const projects = [
   },
   {
     id: 20,
-    name: "Apartment Interiors",
+    name: "Seamless Ceiling Design",
     type: "Interiors",
     status: "Completed",
-    img: "/Projects/Interiors/ApartmentInteriors.png",
+    img: "/Projects/Interiors/SeamlessCeilingDesign.png",
     desc: "Grade A office complex with 15 floors and world-class amenities.",
     location: "Jaipur, Rajasthan", // add
   },
@@ -239,7 +288,7 @@ const projects = [
   // },
 ];
 
-const filters = ["All", "Our Projects", "Residential", "Interiors"];
+const filters = ["All", "Multi-Storey", "Residential", "Interiors"];
 const statusStyle = {
   Completed: { dot: "bg-green-500", border: "border-green-500/60" },
   Ongoing: { dot: "bg-amber-400", border: "border-amber-400/60" },
@@ -367,7 +416,7 @@ export default function ProjectsPage() {
                   <div className="absolute left-1/2 top-0 h-1 w-20 -translate-x-1/2 bg-[#B8934A] transition-all duration-300 group-hover:w-32" />
                   <div className="pt-2">
                     <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.22em] text-[#ffffff]">
-                      {p.type}
+                      {p.client || p.type}
                     </p>
                     <h3 className="font-display text-xl font-bold leading-snug text-[#dab05c] transition-colors group-hover:text-white sm:text-2xl">
                       {p.name}
