@@ -117,7 +117,7 @@ export default function ConsultationPopup({ isOpen, onClose }) {
                     />
                   </div>
 
-                      <button type="button" className="h-8 bg-[#B8934A] text-white font-semibold hover:bg-[#9c7734] transition">
+                      {/* <button type="button" className="h-8 bg-[#B8934A] text-white font-semibold hover:bg-[#9c7734] transition">
                         SEND OTP
                       </button>
                   <div>
@@ -137,7 +137,7 @@ export default function ConsultationPopup({ isOpen, onClose }) {
                         VERIFY
                       </button>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div>
                     <label className="block text-sm font-semibold mb-1">
@@ -208,9 +208,9 @@ export default function ConsultationPopup({ isOpen, onClose }) {
                     )}
                   </div>
 
-                  <div className="pt-2">
+                  <div className="pt-2 flex justify-center">
                     <button type="submit" className="w-full sm:w-auto px-10 h-10 bg-[#B8934A] text-white font-semibold hover:bg-[#9c7734] transition">
-                      SEND ON WHATSAPP
+                      Send Message 
                     </button>
                   </div>
                 </form>
